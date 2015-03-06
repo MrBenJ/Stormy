@@ -97,7 +97,22 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         //did update locations
+        // The code fires when we new location updates are available
+        
+        CLGeocoder().reverseGeocodeLocation(manager.location, completionHandler: { (placemarks, error) -> Void in
+            if (error != nil) {
+                println("Reverse geocoder failed with error " + error.localizedDescription)
+                return
+            }
+            
+        })
+        
     }
+        
+        
+        
+        
+    
     
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
         // Unable to find location. Add an alert with button to tell the user
