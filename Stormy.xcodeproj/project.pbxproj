@@ -14,6 +14,7 @@
 		6C5902AF1AA6325100D463B7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C5902AD1AA6325100D463B7 /* LaunchScreen.xib */; };
 		6C5902BB1AA6325100D463B7 /* StormyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5902BA1AA6325100D463B7 /* StormyTests.swift */; };
 		6C9B9B781AA8D31500B2FC76 /* Current.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9B9B771AA8D31500B2FC76 /* Current.swift */; };
+		6C9B9B7A1AA9688500B2FC76 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C9B9B791AA9688500B2FC76 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		6C5902BA1AA6325100D463B7 /* StormyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StormyTests.swift; sourceTree = "<group>"; };
 		6C5902C41AA6482500D463B7 /* JSONplayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = JSONplayground.playground; sourceTree = "<group>"; };
 		6C9B9B771AA8D31500B2FC76 /* Current.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Current.swift; sourceTree = "<group>"; };
+		6C9B9B791AA9688500B2FC76 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C9B9B7A1AA9688500B2FC76 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +65,7 @@
 		6C5902961AA6325100D463B7 = {
 			isa = PBXGroup;
 			children = (
+				6C9B9B791AA9688500B2FC76 /* CoreLocation.framework */,
 				6C5902C41AA6482500D463B7 /* JSONplayground.playground */,
 				6C5902A11AA6325100D463B7 /* Stormy */,
 				6C5902B71AA6325100D463B7 /* StormyTests */,

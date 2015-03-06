@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import CoreLocation;
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CLLocationManagerDelegate {
+    
+    let locationManager = CLLocationManager()
     
     @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var currentTimeLabel: UILabel!
@@ -19,6 +22,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var refresh: UIButton!
     @IBOutlet weak var refreshActivityIndicator: UIActivityIndicatorView!
+    
+
     
     
     
@@ -88,6 +93,26 @@ class ViewController: UIViewController {
         downloadTask.resume()
 
     }
+    
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        //did update locations
+    }
+    
+    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
+        // Something fucked up
+    }
+    
+    
+    
+    func getLocation() {
+        // Get user location
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
+        
+    }
+    
+    
     
     @IBAction func refreshButton() {
         
