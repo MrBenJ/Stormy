@@ -26,8 +26,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
     
     
-    
-    private let apiKey = "YOUR-FORECAST-IO-API KEY"
+    // API key is for debug and now defunct. Sorry request pirates!
+    private let apiKey = "b18e971e431697969a866523bdbed2a0"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +35,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         getCurrentWeatherData()
         
 
-    }
+    } // end viewDidLoad
     
     func getCurrentWeatherData() -> Void {
         let baseURL = NSURL(string: "https://api.forecast.io/forecast/\(apiKey)/")
@@ -63,9 +63,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                     self.refreshActivityIndicator.hidden = true
                     self.refresh.hidden = false
                     
-                })
+                }) // end dispatch_async closure
                 
-            }
+            } // end if
             else {
                 let networkIssueController: UIAlertController = UIAlertController(title: "Error", message: "Unable to load data. Connectivity error!", preferredStyle: .Alert)
                 
@@ -84,22 +84,27 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                     self.refreshActivityIndicator.hidden = true
                     self.refresh.hidden = false
                     
-                    })
+                    }) // end dispatch_async closure
                 
-            }
+            } // end Else
             
             
-        })
+        }) // end downloadTask closure
+        
         downloadTask.resume()
 
-    }
+    } // end getCurrentWeatherData
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         //did update locations
     }
     
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
-        // Something fucked up
+        // Unable to find location. Add an alert with button to tell the user
+        let locationIssueController: UIAlertController = UIAlertController(title: "Unable to find location", message: "Sorry! We were unable to get your location", preferredStyle: .Alert)
+        let dismissButton = UIAlertAction(title: "Dismiss", style: .Default, handler: nil)
+        locationIssueController.addAction(dismissButton)
+        
     }
     
     
