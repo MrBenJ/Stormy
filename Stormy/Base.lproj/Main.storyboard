@@ -124,6 +124,7 @@
                         <outlet property="currentTimeLabel" destination="hog-Gj-Nj9" id="F2o-oV-s1j"/>
                         <outlet property="humidityLabel" destination="ocv-je-6b1" id="bYS-iO-wBc"/>
                         <outlet property="iconView" destination="HyY-sk-WZb" id="loM-cl-xem"/>
+                        <outlet property="locationLabel" destination="InX-iF-Tvm" id="YSv-WY-UFm"/>
                         <outlet property="precipitationLabel" destination="DUj-yw-3Zk" id="28Q-ew-SI3"/>
                         <outlet property="refresh" destination="wT2-TJ-CZ5" id="6mE-eE-ccw"/>
                         <outlet property="refreshActivityIndicator" destination="cWo-vE-6Ou" id="9cA-wx-Aeh"/>

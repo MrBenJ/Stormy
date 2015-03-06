@@ -23,6 +23,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var refresh: UIButton!
     @IBOutlet weak var refreshActivityIndicator: UIActivityIndicatorView!
     
+    @IBOutlet weak var locationLabel: UILabel!
 
     
     
@@ -39,7 +40,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     func getCurrentWeatherData() -> Void {
         let baseURL = NSURL(string: "https://api.forecast.io/forecast/\(apiKey)/")
-        let forecastURL = NSURL(string: "33.830441,-118.307169", relativeToURL: baseURL)
+        let forecastURL = NSURL(string: "33.830441,-118.307169", relativeToURL: baseURL) // TODO: Change to current location
         
         let sharedSession = NSURLSession.sharedSession()
         let downloadTask: NSURLSessionDownloadTask = sharedSession.downloadTaskWithURL(forecastURL!, completionHandler: { (location: NSURL!, response: NSURLResponse!, error: NSError!) -> Void in
@@ -119,6 +120,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let locationIssueController: UIAlertController = UIAlertController(title: "Unable to find location", message: "Sorry! We were unable to get your location", preferredStyle: .Alert)
         let dismissButton = UIAlertAction(title: "Dismiss", style: .Default, handler: nil)
         locationIssueController.addAction(dismissButton)
+        
+        self.presentViewController(locationIssueController, animated: true, completion: nil)
         
     }
     
