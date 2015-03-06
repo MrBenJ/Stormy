@@ -27,7 +27,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     
     
-    private let apiKey = "b18e971e431697969a866523bdbed2a0"
+    private let apiKey = "YOUR-FORECAST-IO-API KEY"
 
     override func viewDidLoad() {
         super.viewDidLoad()
