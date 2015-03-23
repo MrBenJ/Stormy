@@ -13,6 +13,7 @@
 		6C5902AC1AA6325100D463B7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C5902AB1AA6325100D463B7 /* Images.xcassets */; };
 		6C5902AF1AA6325100D463B7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C5902AD1AA6325100D463B7 /* LaunchScreen.xib */; };
 		6C5902BB1AA6325100D463B7 /* StormyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5902BA1AA6325100D463B7 /* StormyTests.swift */; };
+		6C875F6D1ABF8A1B002368ED /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C875F6C1ABF8A1B002368ED /* Location.swift */; };
 		6C9B9B781AA8D31500B2FC76 /* Current.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9B9B771AA8D31500B2FC76 /* Current.swift */; };
 		6C9B9B7A1AA9688500B2FC76 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C9B9B791AA9688500B2FC76 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
@@ -39,6 +40,7 @@
 		6C5902B91AA6325100D463B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C5902BA1AA6325100D463B7 /* StormyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StormyTests.swift; sourceTree = "<group>"; };
 		6C5902C41AA6482500D463B7 /* JSONplayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = JSONplayground.playground; sourceTree = "<group>"; };
+		6C875F6C1ABF8A1B002368ED /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		6C9B9B771AA8D31500B2FC76 /* Current.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Current.swift; sourceTree = "<group>"; };
 		6C9B9B791AA9688500B2FC76 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -87,6 +89,7 @@
 			children = (
 				6C5902A41AA6325100D463B7 /* AppDelegate.swift */,
 				6C5902A61AA6325100D463B7 /* ViewController.swift */,
+				6C875F6C1ABF8A1B002368ED /* Location.swift */,
 				6C9B9B771AA8D31500B2FC76 /* Current.swift */,
 				6C5902A81AA6325100D463B7 /* Main.storyboard */,
 				6C5902AB1AA6325100D463B7 /* Images.xcassets */,
@@ -223,6 +226,7 @@
 			files = (
 				6C9B9B781AA8D31500B2FC76 /* Current.swift in Sources */,
 				6C5902A71AA6325100D463B7 /* ViewController.swift in Sources */,
+				6C875F6D1ABF8A1B002368ED /* Location.swift in Sources */,
 				6C5902A51AA6325100D463B7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
